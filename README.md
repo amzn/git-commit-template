@@ -3,6 +3,24 @@
 Sets commit template for your git projects. This is a husky plugin which should
 be used on `prepare-commit-msg` hook exposed by git.
 
+When we do git commits we usually follow a practice for the commit message, this
+package aims to streamline that practice by providing you a standard template to
+follow. It also enables you to set your own standard template. With this plugin
+setup, next time when you do `git commit` you will get the standard template for
+commit message set for you.
+
+## Install
+
+For installing this plugin you need [husky](https://github.com/typicode/husky)
+`>= 1.x`. Use npm to install this plugin to your package:
+
+```bash
+npm i --save-dev git-commit-template husky@1
+```
+
+> Note: We have tested the plugin with husky@1 but you can try with higher
+> versions too if that works for you
+
 It exposes a cli command with name `git-commit-template` which you can use in
 your husky configuration. For example:
 
@@ -19,8 +37,8 @@ module.exports = {
 
 This command takes an optional parameter of your commit message file name. If
 provided, then it will read the file provided by you, otherwise uses its default
-configuration file. Read [`.commit-msg`](.commit-msg) file to see the default configuration
-added by us.
+configuration file. Read [`.commit-msg`](.commit-msg) file to see the default
+configuration added by us.
 
 Sample for providing file name:
 
