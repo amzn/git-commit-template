@@ -1,5 +1,5 @@
 {
-  "name": "@amzn/git-commit-template",
+  "name": "git-commit-template",
   "version": "1.0.0",
   "description": "Set commit template for git packages",
   "bin": {
