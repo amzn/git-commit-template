@@ -1,5 +1,8 @@
 # git-commit-template
 
+![npm
+publish](https://github.com/amzn/git-commit-template/workflows/publish/badge.svg)
+
 Sets commit template for your git projects. This is a husky plugin which should
 be used on `prepare-commit-msg` hook exposed by git.
 
