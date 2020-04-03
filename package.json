@@ -1,6 +1,6 @@
 {
   "name": "git-commit-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set commit template for git packages",
   "bin": {
     "git-commit-template": "./bin/git-commit-template.js"
