@@ -4,9 +4,8 @@
 name: Node.js Package
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -29,11 +28,20 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish
+        # This will tell npm to publish your scoped package with public access.
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
+
+  # Disabled job
   publish-gpr:
+    # This doesn't work and read
+    # https://github.com/actions/setup-node/issues/73#issuecomment-599199211
+    # to know why. Github package repository doens't work for package
+    # which are not scoped hence not publishing
+    # Hence, disabling it
+    if: 1 == 0
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -42,8 +50,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: "@amzn"
       - run: npm ci
+        # Read https://joeattardi.codes/2019-11-16-github-package/ to know more
+        # about this hack. I think the above issue should explain this
+      - run: echo registry=https://npm.pkg.github.com/amzn >> $NPM_CONFIG_USERCONFIG
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
