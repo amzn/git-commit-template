@@ -25,10 +25,10 @@
   "author": "anshulguleria@ymail.com",
   "license": "Apache 2.0",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-json": "^1.4.0",
+    "eslint": "^7.2.0",
+    "eslint-plugin-json": "^2.1.1",
     "husky": "^2.3.0",
-    "lint-staged": "^8.1.6",
+    "lint-staged": "^10.2.9",
     "prettier": "^1.17.1"
   }
 }
