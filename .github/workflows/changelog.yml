@@ -1,0 +1,41 @@
+name: changelog
+
+on:
+  pull_request:
+    types: [closed]
+
+  release:
+    types: [published]
+
+  issues:
+    types: [closed, edited]
+
+jobs:
+  generate_changelog:
+    runs-on: ubuntu-latest
+    name: Generate changelog for master branch
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Generate changelog
+        uses: charmixer/auto-changelog-action@v1
+
+      - name: Commit files
+        env:
+          CI_USER: "CHANGELOG Bot"
+          CI_EMAIL: "noreply@github.com"
+        run: |
+          git config --local user.email "$CI_EMAIL"
+          git config --local user.name "$CI_USER"
+          git add CHANGELOG.md
+          git commit -m '[BOT] 🤖 Updated CHANGELOG.md' && echo ::set-env name=push::1 || echo "No changes to CHANGELOG.md"
+
+      - name: Push changes
+        # This will be true if we are able to commit changes
+        if: env.push == 1
+        #env:
+          # Do we need this again or it picks from top
+          #CI_USER: "CHANGELOG Bot"
+          #CI_EMAIL: "noreply@github.com"
+        run: |
+          git push
