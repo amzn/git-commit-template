@@ -1,8 +1,16 @@
 # Changelog
 
-## [Unreleased](https://github.com/amzn/git-commit-template/tree/HEAD)
+## [v1.0.4](https://github.com/amzn/git-commit-template/tree/v1.0.4) (2020-06-11)
 
-[Full Changelog](https://github.com/amzn/git-commit-template/compare/v1.0.2...HEAD)
+[Full Changelog](https://github.com/amzn/git-commit-template/compare/v1.0.3...v1.0.4)
+
+**Merged pull requests:**
+
+- \[BUG\] Fixes push on tag publish [\#13](https://github.com/amzn/git-commit-template/pull/13) ([anshulguleria](https://github.com/anshulguleria))
+
+## [v1.0.3](https://github.com/amzn/git-commit-template/tree/v1.0.3) (2020-06-11)
+
+[Full Changelog](https://github.com/amzn/git-commit-template/compare/v1.0.2...v1.0.3)
 
 **Closed issues:**
 
