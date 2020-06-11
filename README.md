@@ -2,6 +2,7 @@
 
 ![npm
 publish](https://github.com/amzn/git-commit-template/workflows/publish/badge.svg)
+![changelog](https://github.com/amzn/git-commit-template/workflows/changelog/badge.svg)
 
 Sets commit template for your git projects. This is a husky plugin which should
 be used on `prepare-commit-msg` hook exposed by git.

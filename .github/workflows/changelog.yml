@@ -38,4 +38,4 @@ jobs:
           #CI_USER: "CHANGELOG Bot"
           #CI_EMAIL: "noreply@github.com"
         run: |
-          git push
+          git push origin HEAD:master
