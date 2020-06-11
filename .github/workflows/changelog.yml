@@ -19,6 +19,8 @@ jobs:
 
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit files
         env:
@@ -33,9 +35,8 @@ jobs:
       - name: Push changes
         # This will be true if we are able to commit changes
         if: env.push == 1
-        #env:
-          # Do we need this again or it picks from top
-          #CI_USER: "CHANGELOG Bot"
-          #CI_EMAIL: "noreply@github.com"
+        env:
+          CI_USER: "CHANGELOG Bot"
+          CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push origin HEAD:master
+          git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
