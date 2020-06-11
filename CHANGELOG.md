@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.0.5](https://github.com/amzn/git-commit-template/tree/v1.0.5) (2020-06-11)
+
+[Full Changelog](https://github.com/amzn/git-commit-template/compare/v1.0.4...v1.0.5)
+
+**Merged pull requests:**
+
+- \[BUG\] Fixs changelog for pull\_request close event [\#14](https://github.com/amzn/git-commit-template/pull/14) ([anshulguleria](https://github.com/anshulguleria))
+
 ## [v1.0.4](https://github.com/amzn/git-commit-template/tree/v1.0.4) (2020-06-11)
 
 [Full Changelog](https://github.com/amzn/git-commit-template/compare/v1.0.3...v1.0.4)
