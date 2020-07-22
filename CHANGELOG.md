@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/amzn/git-commit-template/tree/HEAD)
+
+[Full Changelog](https://github.com/amzn/git-commit-template/compare/v1.0.5...HEAD)
+
+**Merged pull requests:**
+
+- Bump lodash from 4.17.15 to 4.17.19 [\#17](https://github.com/amzn/git-commit-template/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.0.5](https://github.com/amzn/git-commit-template/tree/v1.0.5) (2020-06-11)
 
 [Full Changelog](https://github.com/amzn/git-commit-template/compare/v1.0.4...v1.0.5)
